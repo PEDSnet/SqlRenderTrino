@@ -1475,7 +1475,7 @@ trino,CAST(@a AS varchar(@b)) +,CAST(@a AS varchar(@b)) ||
 trino,+ CAST(@a AS varchar(@b)),|| CAST(@a AS varchar(@b))
 trino,CAST(@a AS varchar) +,CAST(@a AS varchar) ||
 trino,+ CAST(@a AS varchar),|| CAST(@a AS varchar)
-trino,"DATEFROMPARTS(@year,@month,@day)","DATE(CAST(2025 AS VARCHAR) || '-' || LPAD(CAST(4 AS VARCHAR), 2, '0') || '-' || LPAD(CAST(14 AS VARCHAR), 2, '0'));"
+trino,"DATEFROMPARTS(@year,@month,@day)","DATE(CAST(2025 AS VARCHAR) || '-' || LPAD(CAST(4 AS VARCHAR), 2, '0') || '-' || LPAD(CAST(14 AS VARCHAR), 2, '0'))"
 trino,"DATETIMEFROMPARTS(@year,@month,@day,@hour,@minute,@second,@ms)","TO_DATE(TO_CHAR(@year,'0000')||'-'||TO_CHAR(@month,'00')||'-'||TO_CHAR(@day,'00')||' '||TO_CHAR(@hour,'00')||':'||TO_CHAR(@minute,'00')||':'||TO_CHAR(@second,'00'), 'YYYY-MM-DD HH24:MI:SS')"
 trino,"DATEPART(YEAR, @date)",EXTRACT(YEAR FROM @date)
 trino,"DATEPART(MONTH, @date)",EXTRACT(MONTH FROM @date)
